@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t tjoseph/docker-react -f Deockerfile.dev .
+  - docker build -t tjoseph/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true tjoseph/docker-react cpm run test
